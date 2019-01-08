@@ -36,6 +36,8 @@ void main()
 
 	printf("\n\n\t\tEnter the cypher key     : ");
 	scanf("%d",	&key);
+	printf("\n\n");
+
 
 	// Caesar Cipher chart
 	keyPos = key-1;		// -1 given for that's the array starts with zero 
@@ -62,21 +64,45 @@ void main()
 		
 		}
 	}
-//
+
+//*
 	for( i=0; i < 26; i++)
 	{
-		printf(" %c",p[i]);
+		printf("      %c",p[i]);
 	}
-	
-	printf("\n\n\t\tThe cypher code is !!!!!!!!!!!!!!!\n\n\n");
+	printf("\n");
+	// these two forloops are for the design dots of the chart
+	for(int row = 0; row < 1; row++)
+	{
+		int column;
+		for(column = 0; column < 26; column++)
+		{
+			printf("      .");				
+		}printf("\n");
+
+		for(column = 0; column < 26; column++)
+		{
+			if(column == 0)
+			{
+				printf("      |");
+			}else
+			printf("######|");				
+		}printf("\n");
+
+		for(column = 0; column < 26; column++)
+		{
+			printf("      .");				
+		}
+		printf("\n");
+	}
+		
 
 	for(j=0; j < 26; j++)
 	{
-		printf(" %c",c[j]);
+		printf("      %c",c[j]);
 	}
 	printf("\n\n");
-
-//	
+//*
 	i=0;
 	while(i < lenIn)	//	Storing encrypted string in 'CI'
 	{
@@ -97,7 +123,8 @@ void main()
 		
 		i++;
 	}
-	
+
+
 	printf("\n\t\tThe CAESAR CIPHER is \n ");
 	for( i=0; i < lenIn; i++)
 	{

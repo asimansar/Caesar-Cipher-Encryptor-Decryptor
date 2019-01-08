@@ -80,13 +80,18 @@ void main()
 			printf("      .");				
 		}printf("\n");
 
-		for(column = 0; column < 26; column++)
+		for(column = 1; column < 27; column++)
 		{
-			if(column == 0)
+			if(column == 1)
 			{
-				printf("      |");
-			}else
-			printf("######|");				
+				printf("      %d",column);
+			}else if(column < 11)
+			printf("------%d",column);
+			else if(column >10)
+			{
+				printf("-----%d",column);
+			}
+							
 		}printf("\n");
 
 		for(column = 0; column < 26; column++)
